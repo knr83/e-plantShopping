@@ -36,7 +36,11 @@ body {
     color: white;
     font-size: 30px;
     text-decoration: none;
-   
+}
+
+.category {
+    text-align: center;
+    margin-top: 10px;
 }
 
 /* Product Grid */
@@ -70,7 +74,7 @@ body {
     border-radius: 5px;
     text-align: center;
     position: relative;
-    
+
     gap: 20px;
 }
 
@@ -150,7 +154,7 @@ body {
     height: 70px;
     width: 70px;
     border-radius: 70%;
-    
+
 }
 
 .luxury {
@@ -172,7 +176,7 @@ body {
     font-size: 29px;
 
 }
-.plantname_heading{
+.   plantname_heading{
    display: flex;
    align-items: center;
    justify-content: center;
@@ -186,7 +190,7 @@ body {
     border-left: none;
     border-right: none;
 
-    
+
 }
 /* Add Media Query for responsiveness */
 @media (max-width: 768px) {
@@ -210,11 +214,11 @@ body {
     transition-duration: 0.4s;
     cursor: pointer;
   }
-  
+
   .product-button:hover {
     background-color: #45a049;
   }
-  
+
   .product-button.added-to-cart {
     background-color: grey; /* Grey when product is added */
   }
@@ -224,7 +228,7 @@ body {
       max-width: calc(33.33% - 20px); /* Adjust max-width for 3 cards per row with 20px gap on medium screens */
     }
   }
-  
+
   @media (max-width: 768px) {
     .product-card {
       flex: 1 1 calc(50% - 20px); /* Adjust width for 2 cards per row with 20px gap on small screens */
@@ -234,18 +238,18 @@ body {
         flex-direction: column; /* Change flex direction to stack items vertically */
         align-items: center; /* Align items to the center of the container */
       }
-    
+
       .tag {
         margin-bottom: 20px; /* Add margin bottom for spacing */
         text-align: center; /* Align text to the center */
       }
-    
+
       .ul {
         display: flex; /* Set display to flex */
         flex-direction: column; /* Change flex direction to stack items vertically */
         gap: 10px; /* Add gap between items */
       }
-    
+
       .ul div {
         text-align: center; /* Align text to the center */
       }
