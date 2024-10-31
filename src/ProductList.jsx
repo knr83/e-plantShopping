@@ -256,6 +256,9 @@ function ProductList() {
     const handleAddToCart = (product) => {
         dispatch(addItem(product));
     };
+
+    const isInCart = (plantName) => cartItems.some((item) => item.name === plantName);
+
     return (
         <div>
             <div className="navbar" style={styleObj}>
@@ -302,9 +305,11 @@ function ProductList() {
                                         <div className="product-title">{plant.name}</div>
                                         <div className="product-description">{plant.description}</div>
                                         <div className="product-price">{plant.cost}</div>
-                                        {/*Similarly like the above plant.name show other details like description and cost*/}
-                                        <button className="product-button" onClick={() => handleAddToCart(plant)}>Add to
-                                            Cart
+                                        <button className="product-button"
+                                            onClick={() => dispatch(addItem(plant))}
+                                            disabled={isInCart(plant.name)}
+                                        >
+                                            {isInCart(plant.name) ? 'In Cart' : 'Add to Cart'}
                                         </button>
                                     </div>
                                 ))}
